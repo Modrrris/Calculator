@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <!-- The screen: a small line showing the sum so far, and the big number -->
+    <div class="display">
+      <div id="expression" class="expression"></div>
+      <div id="result" class="result" aria-live="polite">0</div>
+    </div>
+
+    <!-- The buttons. The data-... labels tell script.js what each button does -->
+    <div id="keypad" class="keypad">
+      <button class="key action wide" data-action="clear">C</button>
+      <button class="key action" data-action="backspace" aria-label="Delete last digit">⌫</button>
+      <button class="key operator" data-operator="/" aria-label="Divide">÷</button>
+
+      <button class="key" data-digit="7">7</button>
+      <button class="key" data-digit="8">8</button>
+      <button class="key" data-digit="9">9</button>
+      <button class="key operator" data-operator="*" aria-label="Multiply">×</button>
+
+      <button class="key" data-digit="4">4</button>
+      <button class="key" data-digit="5">5</button>
+      <button class="key" data-digit="6">6</button>
+      <button class="key operator" data-operator="-" aria-label="Subtract">−</button>
+
+      <button class="key" data-digit="1">1</button>
+      <button class="key" data-digit="2">2</button>
+      <button class="key" data-digit="3">3</button>
+      <button class="key operator" data-operator="+" aria-label="Add">+</button>
+
+      <button class="key wide" data-digit="0">0</button>
+      <button class="key" data-action="decimal" aria-label="Decimal point">.</button>
+      <button class="key equals" data-action="equals" aria-label="Equals">=</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
